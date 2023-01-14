@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+    <title>growth</title>
+    <g id="growth" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M14.166667,14 L14.166667,22 L10.166667,22 L10.166667,14 L14.166667,14 Z M20.166667,11 L20.166667,22 L16.166667,22 L16.166667,11 L20.166667,11 Z M8.166667,17 L8.166667,22 L4.166667,22 L4.166667,17 L8.166667,17 Z M20.3086176,2 L20.3086176,8.53879201 L18.008,6.238 L13.7131812,10.5340671 L11.8637316,12.3835168 L10.0142819,10.5340671 L9.165,9.684 L4.84944967,14 L3,12.1505503 L9.16483223,5.9857181 L11.864,8.685 L16.159,4.389 L13.7698256,2 L20.3086176,2 Z" id="🎨Color" fill="#524F53" style="fill: #524f53;"/>
+        <polygon id="Path" opacity="0" points="0 0 24 0 24 24 0 24" style="fill: #524f53;"/>
+    </g>
+</svg>

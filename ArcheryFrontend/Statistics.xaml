@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxc="clr-namespace:DevExpress.Maui.Charts;assembly=DevExpress.Maui.Charts"
+             x:Class="ArcheryFrontend.Statistics"
+             Title="Statistics"
+             NavigationPage.HasNavigationBar="False"
+             Background="{StaticResource PageGradient}">
+    <Grid>
+        <Label 
+            Text="This is the Statistics Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid x:Name="NavigationGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton x:Name="NotificationButton" Grid.Row="0" Grid.Column="0" Clicked="NavigationButton_Clicked" Margin="5" ClassId="1" Source="notification.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="SettingsButton" Grid.Row="0" Grid.Column="3" Clicked="NavigationButton_Clicked" Margin="5" ClassId="2" Source="settings.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="HomeButton" Grid.Row="8" Grid.Column="0" Clicked="NavigationButton_Clicked" Margin="5" ClassId="3" Source="home.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="CreateButton" Grid.Row="8" Grid.Column="1" Clicked="NavigationButton_Clicked" Margin="5" ClassId="4" Source="add.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="StatisticsButton" Grid.Row="8" Grid.Column="2" Clicked="NavigationButton_Clicked" Margin="5" ClassId="5" Source="chart_up_clicked.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="UserButton" Grid.Row="8" Grid.Column="3" Clicked="NavigationButton_Clicked" Margin="5" ClassId="6" Source="user.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <Switch x:Name="StatisticsSwitch" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" Toggled="StatisticsSwitch_Toggled"/>
+            <Label Text="Spiele" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="Pfeile" Grid.Row="1" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <RoundRectangle x:Name="StatisticsRect" Grid.Row="2" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="4" Fill="White" Stroke="Gray" CornerRadius="20" Margin="10,5,10,20"/>
+
+            <Grid x:Name="GameGrid" Grid.Row="2" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="4" Margin="10,5,10,20" IsVisible="False">
+                <Label Text="Letztes Spiel" HorizontalOptions="Center" FontSize="20" Margin="10,60,10,0"/>
+                <Rectangle HeightRequest="50" Stroke="Black" Margin="10,-200,10,0"/>
+                <Label Text="Gesamtpunktzahl" HorizontalOptions="Center" Margin="10,155,130,0" FontSize="20"/>
+                <Rectangle HeightRequest="50" Stroke="Black" Margin="10,-100,10,0"/>
+                <Label Text="Trefferquote" HorizontalOptions="Center" Margin="10,205,130,0" FontSize="20"/>
+                <Rectangle HeightRequest="50" Stroke="Black" Margin="10,-0,10,0"/>
+                <Label Text="Punkte pro Schuss" HorizontalOptions="Center" Margin="10,255,130,0" FontSize="20"/>
+                <Rectangle HeightRequest="50" Stroke="Black" Margin="10,100,10,0"/>
+                <Label Text="Höchster Treffer" HorizontalOptions="Center" Margin="10,305,130,0" FontSize="20"/>
+                <Rectangle HeightRequest="50" Stroke="Black" Margin="10,200,10,0"/>
+                <Label Text="Niedrigster Treffer" HorizontalOptions="Center" Margin="10,355,130,0" FontSize="20"/>
+                <Rectangle HeightRequest="250" Stroke="Black" Margin="250,0,10,0"/>
+                
+            </Grid>
+            
+            <Grid x:Name="ArrowGrid" Grid.Row="2" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="4" Margin="10,5,10,20" IsVisible="True">
+                <Rectangle Stroke="Black" Margin="10,10,10,280"/>
+                <Rectangle Stroke="Black" Margin="10,10,10,480"/>
+                <Label Text="Schuss/Treffer" FontSize="20" Margin="10,18,10,0" HorizontalOptions="Center"/>
+                <Rectangle Stroke="Black" Margin="10,10,10,430"/>
+                <Rectangle Stroke="Black" Margin="10,10,10,380"/>
+                <Rectangle Stroke="Black" Margin="10,10,10,330"/>
+                <Rectangle Stroke="Black" Margin="300,56,10,280"/>
+                <Label Text="1. Schuss" Margin="10,56,80,430" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label Text="2. Schuss" Margin="10,106,80,380" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label Text="3. Schuss" Margin="10,156,80,330" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label Text="Kein Treffer" Margin="10,206,80,280" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+
+                <Rectangle Stroke="Black" Margin="10,280,10,10"/>
+                <Rectangle Stroke="Black" Margin="10,280,10,210"/>
+                <Label Text="Schuss/Ring" FontSize="20" Margin="10,290,10,0" HorizontalOptions="Center"/>
+                <Rectangle Stroke="Black" Margin="10,280,10,160"/>
+                <Rectangle Stroke="Black" Margin="10,280,10,110"/>
+                <Rectangle Stroke="Black" Margin="10,280,10,60"/>
+                <Label Text="1. Ring" Margin="10,330,80,165" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label Text="2. Ring" Margin="10,380,80,115" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label Text="3. Ring" Margin="10,430,80,65" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label Text="Außerhalb" Margin="10,480,80,15" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+
+                <Rectangle Stroke="Black" Margin="300,326,10,10"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

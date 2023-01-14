@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArcheryFrontend.LiveEvent"
+             Title="LiveEvent"
+             NavigationPage.HasNavigationBar="False"
+             Background="{StaticResource PageGradient}">
+
+    <Grid>
+        <Grid x:Name="LiveEventGridList" IsVisible="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="1. Target" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" FontSize="24" FontAttributes="Bold" Margin="0,50,0,0"/>
+            <Rectangle x:Name="RectP1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" StrokeThickness="1" Stroke="White" Margin="10,0,10,0"/>
+            <Label x:Name="NickP1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="Test1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
+            <Label x:Name="ScoreP1" Grid.Row="1" Grid.Column="4" Text="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,10,0" FontSize="20"/>
+
+            <Rectangle x:Name="RectP2" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" StrokeThickness="1" Stroke="White" Margin="10,0,10,0"/>
+            <Label x:Name="NickP2" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="Test2" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
+            <Label x:Name="ScoreP2" Grid.Row="2" Grid.Column="4" Text="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,10,0" FontSize="20"/>
+
+            <Rectangle x:Name="RectP3" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" StrokeThickness="1" Stroke="White" Margin="10,0,10,0"/>
+            <Label x:Name="NickP3" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Text="Test3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
+            <Label x:Name="ScoreP3" Grid.Row="3" Grid.Column="4" Text="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,10,0" FontSize="20"/>
+
+            <Rectangle x:Name="RectP4" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" StrokeThickness="1" Stroke="White" Margin="10,0,10,0"/>
+            <Label x:Name="NickP4" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Text="Test4" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
+            <Label x:Name="ScoreP4" Grid.Row="4" Grid.Column="4" Text="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,10,0" FontSize="20"/>
+
+            <Rectangle x:Name="RectP5" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" StrokeThickness="1" Stroke="White" Margin="10,0,10,0"/>
+            <Label x:Name="NickP5" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Text="Test5" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
+            <Label x:Name="ScoreP5" Grid.Row="5" Grid.Column="4" Text="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,10,0" FontSize="20"/>
+            
+            <Rectangle x:Name="RectVertical" Grid.Row="1" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="3" Stroke="White" Margin="10,0,0,0"/>
+            <Button Text="Bestätigen" Grid.Row="6" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,50,0,50"/>
+
+        </Grid>
+        
+        <Grid x:Name="LiveEventGridGame" IsVisible="False">
+            <Label Text="1. Pfeil" HorizontalOptions="Center" FontSize="24" FontAttributes="Bold" Margin="0,50,0,0"/>
+            <ImageButton x:Name="Hit1" HorizontalOptions="Center" Source="onehit.svg" BorderWidth="2" BorderColor="White" Margin="0,-350,0,0" WidthRequest="100" HeightRequest="100"/>
+            <ImageButton x:Name="Hit2" HorizontalOptions="Center" Source="twohit.svg" BorderWidth="2" BorderColor="White" Margin="0,-125,0,0" WidthRequest="100" HeightRequest="100"/>
+            <ImageButton x:Name="Hit3" HorizontalOptions="Center" Source="threehit.svg" BorderWidth="2" BorderColor="White" Margin="0,100,0,0" WidthRequest="100" HeightRequest="100"/>
+            <ImageButton x:Name="NoHit" HorizontalOptions="Center" Source="nohit.svg" BorderWidth="2" BorderColor="White" Margin="0,325,0,0" WidthRequest="100" HeightRequest="100"/>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArcheryFrontend.User"
+             Title="User"
+             NavigationPage.HasNavigationBar="False"
+             Background="{StaticResource PageGradient}">
+
+    <Grid>
+        <Label 
+            Text="This is the User Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid x:Name="NavigationGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton x:Name="NotificationButton" Grid.Row="0" Grid.Column="0" Clicked="NavigationButton_Clicked" Margin="5" ClassId="1" Source="notification.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="SettingsButton" Grid.Row="0" Grid.Column="3" Clicked="NavigationButton_Clicked" Margin="5" ClassId="2" Source="settings.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="HomeButton" Grid.Row="8" Grid.Column="0" Clicked="NavigationButton_Clicked" Margin="5" ClassId="3" Source="home.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="CreateButton" Grid.Row="8" Grid.Column="1" Clicked="NavigationButton_Clicked" Margin="5" ClassId="4" Source="add.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="StatisticsButton" Grid.Row="8" Grid.Column="2" Clicked="NavigationButton_Clicked" Margin="5" ClassId="5" Source="chart_up.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="UserButton" Grid.Row="8" Grid.Column="3" Clicked="NavigationButton_Clicked" Margin="5" ClassId="6" Source="user_clicked.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <Ellipse Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2"  Fill="White" Stroke="Gray" StrokeThickness="8" WidthRequest="250" HeightRequest="250"/>
+            <Image Source="user_clicked.svg" Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2" HeightRequest="150" WidthRequest="150"/>
+            <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="Profil bearbeiten" Margin="0,25,0,10" Background="White" FontAttributes="Bold" TextColor="Gray" BorderColor="Gray" BorderWidth="4"/>
+            <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Text="Ausloggen" Margin="0,20,0,20" Background="#80FF0000" TextColor="Gray" FontAttributes="Bold" BorderColor="Gray" BorderWidth="4"/>
+            <Button Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Text="Konto löschen" Margin="0,20,0,20" Background="#AAFF0000" TextColor="Gray" FontAttributes="Bold" BorderColor="Gray" BorderWidth="4"/>
+        </Grid>
+    </Grid>
+</ContentPage>

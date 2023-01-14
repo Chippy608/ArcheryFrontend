@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArcheryFrontend.Settings"
+             Title="Settings"
+             NavigationPage.HasNavigationBar="False"
+             Background="{StaticResource PageGradient}">
+    <Grid>
+        <Label 
+            Text="This is the Settings Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid x:Name="NavigationGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton x:Name="NotificationButton" Grid.Row="0" Grid.Column="0" Clicked="NavigationButton_Clicked" Margin="5" ClassId="1" Source="notification.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="SettingsButton" Grid.Row="0" Grid.Column="3" Clicked="NavigationButton_Clicked" Margin="5" ClassId="2" Source="settings_clicked.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="HomeButton" Grid.Row="2" Grid.Column="0" Clicked="NavigationButton_Clicked" Margin="5" ClassId="3" Source="home.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="CreateButton" Grid.Row="2" Grid.Column="1" Clicked="NavigationButton_Clicked" Margin="5" ClassId="4" Source="add.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="StatisticsButton" Grid.Row="2" Grid.Column="2" Clicked="NavigationButton_Clicked" Margin="5" ClassId="5" Source="chart_up.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+            <ImageButton x:Name="UserButton" Grid.Row="2" Grid.Column="3" Clicked="NavigationButton_Clicked" Margin="5" ClassId="6" Source="user.svg" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48"/>
+        </Grid>
+    </Grid>
+</ContentPage>
