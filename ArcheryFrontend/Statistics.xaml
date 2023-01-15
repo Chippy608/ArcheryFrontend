@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxc="clr-namespace:DevExpress.Maui.Charts;assembly=DevExpress.Maui.Charts"
              x:Class="ArcheryFrontend.Statistics"
              Title="Statistics"
              NavigationPage.HasNavigationBar="False"
@@ -44,14 +43,19 @@
                 <Label Text="Letztes Spiel" HorizontalOptions="Center" FontSize="20" Margin="10,60,10,0"/>
                 <Rectangle HeightRequest="50" Stroke="Black" Margin="10,-200,10,0"/>
                 <Label Text="Gesamtpunktzahl" HorizontalOptions="Center" Margin="10,155,130,0" FontSize="20"/>
+                <Label x:Name="TotalPointsLabel" Text="" HorizontalOptions="Center" Margin="250,155,10,0" FontSize="20"/>
                 <Rectangle HeightRequest="50" Stroke="Black" Margin="10,-100,10,0"/>
                 <Label Text="Trefferquote" HorizontalOptions="Center" Margin="10,205,130,0" FontSize="20"/>
+                <Label x:Name="HitQuoteLabel" Text="" HorizontalOptions="Center" Margin="250,205,10,0" FontSize="20"/>
                 <Rectangle HeightRequest="50" Stroke="Black" Margin="10,-0,10,0"/>
                 <Label Text="Punkte pro Schuss" HorizontalOptions="Center" Margin="10,255,130,0" FontSize="20"/>
+                <Label x:Name="PointQuoteLabel" Text="" HorizontalOptions="Center" Margin="250,255,10,0" FontSize="20"/>
                 <Rectangle HeightRequest="50" Stroke="Black" Margin="10,100,10,0"/>
                 <Label Text="Höchster Treffer" HorizontalOptions="Center" Margin="10,305,130,0" FontSize="20"/>
+                <Label x:Name="HiHitLabel" Text="" HorizontalOptions="Center" Margin="250,305,10,0" FontSize="20"/>
                 <Rectangle HeightRequest="50" Stroke="Black" Margin="10,200,10,0"/>
                 <Label Text="Niedrigster Treffer" HorizontalOptions="Center" Margin="10,355,130,0" FontSize="20"/>
+                <Label x:Name="LowHitLabel" Text="" HorizontalOptions="Center" Margin="250,355,10,0" FontSize="20"/>
                 <Rectangle HeightRequest="250" Stroke="Black" Margin="250,0,10,0"/>
                 
             </Grid>
@@ -65,9 +69,13 @@
                 <Rectangle Stroke="Black" Margin="10,10,10,330"/>
                 <Rectangle Stroke="Black" Margin="300,56,10,280"/>
                 <Label Text="1. Schuss" Margin="10,56,80,430" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="ST1Label" Text="" Margin="300,56,10,430" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                 <Label Text="2. Schuss" Margin="10,106,80,380" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="ST2Label" Text="" Margin="300,106,10,380" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                 <Label Text="3. Schuss" Margin="10,156,80,330" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="ST3Label" Text="" Margin="300,156,10,330" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                 <Label Text="Kein Treffer" Margin="10,206,80,280" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="ST4Label" Text="" Margin="300,206,10,280" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
 
                 <Rectangle Stroke="Black" Margin="10,280,10,10"/>
                 <Rectangle Stroke="Black" Margin="10,280,10,210"/>
@@ -76,9 +84,13 @@
                 <Rectangle Stroke="Black" Margin="10,280,10,110"/>
                 <Rectangle Stroke="Black" Margin="10,280,10,60"/>
                 <Label Text="1. Ring" Margin="10,330,80,165" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="SR1Label" Text="" Margin="300,330,10,165" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                 <Label Text="2. Ring" Margin="10,380,80,115" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="SR2Label" Text="" Margin="300,380,10,115" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                 <Label Text="3. Ring" Margin="10,430,80,65" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="SR3Label" Text="" Margin="300,430,10,65" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
                 <Label Text="Außerhalb" Margin="10,480,80,15" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
+                <Label x:Name="SR4Label" Text="" Margin="300,480,10,15" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"/>
 
                 <Rectangle Stroke="Black" Margin="300,326,10,10"/>
             </Grid>

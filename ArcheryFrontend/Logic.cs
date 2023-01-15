@@ -171,6 +171,35 @@ namespace ArcheryFrontend
             return tmpArr;
         }
 
+        public static double AvgSum()
+        {
+            int[] tmpPoints = Stats();
+            return tmpPoints.Average();
+        }
+
+        //[0] = minVal
+        //[1] = maxVal
+        public static int[] MaxMinVals()
+        {
+            int[] vals = Stats();
+            int[] maxminVal = new int[2];
+            maxminVal[0] = 1000;
+            maxminVal[1] = 0;
+
+            for (int i = 0; i < vals.Length; i++)
+            {
+                if (vals[i] < maxminVal[0])
+                {
+                    maxminVal[0] = vals[i];
+                }
+                else if (vals[i] > maxminVal[1])
+                {
+                    maxminVal[1] = vals[i];
+                }
+            }
+            return maxminVal;
+        }
+
         #endregion
     }
 }

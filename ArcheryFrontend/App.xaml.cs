@@ -41,11 +41,11 @@ public partial class App : Application
         Initialize();
     }
 
-    public static void Initialize()
+    public static async void Initialize()
     {
-        APICalls.GetUser();
-        APICalls.GetParcour();
-        APICalls.GetEvent();
+        await APICalls.GetUser();
+        await APICalls.GetParcour();
+        await APICalls.GetEvent();
     }
 
 

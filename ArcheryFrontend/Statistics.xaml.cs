@@ -32,6 +32,11 @@ public partial class Statistics : ContentPage
         {
             GameGrid.IsVisible = false;
             ArrowGrid.IsVisible = true;
+            //int totalpoints = InteractiveUser.CalculateSum();
+            PointQuoteLabel.Text = Logic.AvgSum().ToString();
+            int[] tmphilow = Logic.MaxMinVals();
+            HiHitLabel.Text = tmphilow[0].ToString();
+            LowHitLabel.Text = tmphilow[1].ToString();
         }
         else if (!StatisticsSwitch.IsToggled)
         {

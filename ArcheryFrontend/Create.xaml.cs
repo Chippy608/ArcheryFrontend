@@ -2,6 +2,9 @@ namespace ArcheryFrontend;
 
 public partial class Create : ContentPage
 {
+    int activeplayercount = 1;
+    List<string> nicknamelist = new List<string>();
+
 	public Create()
 	{
 		InitializeComponent();
@@ -45,10 +48,32 @@ public partial class Create : ContentPage
     private void EventParkourBestätigen_Clicked(object sender, EventArgs e)
     {
         EventGridStarten.IsVisible= true;
+        nicknamelist.Add("Jonathan");
     }
 
     private void EventStartenButton_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new LiveEvent());
+        Navigation.PushAsync(new LiveEvent(activeplayercount, nicknamelist));
+    }
+
+    private void AddPlayer_Clicked(object sender, EventArgs e)
+    {
+        if (FirstName.Text != "" && Name.Text !="" && Nickname.Text != "") {
+            activeplayercount++;
+
+            switch (activeplayercount)
+            {
+                case 2: nicknamelist.Add(Nickname.Text); Player2Name.Text =  FirstName.Text + " " + Name.Text + ": " + Nickname.Text; FirstName.Text = ""; Name.Text = ""; Nickname.Text = "";
+                    break;
+                case 3: nicknamelist.Add(Nickname.Text); Player3Name.Text = FirstName.Text + " " + Name.Text + ": " + Nickname.Text; FirstName.Text = ""; Name.Text = ""; Nickname.Text = "";
+                    break;
+                case 4: nicknamelist.Add(Nickname.Text); Player4Name.Text = FirstName.Text + " " + Name.Text + ": " + Nickname.Text; FirstName.Text = ""; Name.Text = ""; Nickname.Text = "";
+                    break;
+                case 5: nicknamelist.Add(Nickname.Text); Player5Name.Text = FirstName.Text + " " + Name.Text + ": " + Nickname.Text; FirstName.Text = ""; Name.Text = ""; Nickname.Text = ""; AddPlayer.IsEnabled = false;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

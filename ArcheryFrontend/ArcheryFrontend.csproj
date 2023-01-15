@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Platforms\Android\Resources\xml\networksecurityconfig.xml" />
 	  <None Remove="Resources\Images\add.svg" />
 	  <None Remove="Resources\Images\add_clicked.svg" />
 	  <None Remove="Resources\Images\chart_up.svg" />

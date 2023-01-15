@@ -11,16 +11,17 @@ namespace ArcheryFrontend
 {
     public class APICalls
     {
-        private static string url = "http://localhost:5283/Archery";
+        private static string url = "http://10.0.2.2:5283/Archery";
         private static HttpClient httpClient = new HttpClient();
         #region API Calls
         //GetUser
-        public static async void GetUser()
+        public static async Task GetUser()
         {
-            var httpResponse = await httpClient.GetAsync("http://localhost:5283/Archery/GetUser");
+            var httpResponse = await httpClient.GetAsync("http://10.0.2.2:5283/Archery/GetUser");
 
             if (httpResponse.IsSuccessStatusCode)
             {
+
                 IEnumerable<User>? tmpResult = JsonConvert.DeserializeObject<IEnumerable<User>>(
                     await httpResponse.Content.ReadAsStringAsync());
 
@@ -48,9 +49,9 @@ namespace ArcheryFrontend
         }
 
         //GetParcour
-        public static async void GetParcour()
+        public static async Task GetParcour()
         {
-            var httpResponse = await httpClient.GetAsync("http://localhost:5283/Archery/GetParcour");
+            var httpResponse = await httpClient.GetAsync("http://10.0.2.2:5283/Archery/GetParcour");
 
             if (httpResponse.IsSuccessStatusCode)
             {
@@ -80,7 +81,7 @@ namespace ArcheryFrontend
         }
 
         //GetEvent
-        public static async void GetEvent()
+        public static async Task GetEvent()
         {
             var httpResponse = await httpClient.GetAsync(url + "/GetEvent");
 

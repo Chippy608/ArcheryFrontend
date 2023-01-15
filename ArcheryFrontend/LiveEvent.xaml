@@ -7,7 +7,7 @@
              Background="{StaticResource PageGradient}">
 
     <Grid>
-        <Grid x:Name="LiveEventGridList" IsVisible="True">
+        <Grid x:Name="LiveEventGridList" IsVisible="False">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -47,7 +47,7 @@
             <Label x:Name="ScoreP5" Grid.Row="5" Grid.Column="4" Text="20" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,10,0" FontSize="20"/>
             
             <Rectangle x:Name="RectVertical" Grid.Row="1" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="3" Stroke="White" Margin="10,0,0,0"/>
-            <Button Text="Bestätigen" Grid.Row="6" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,50,0,50"/>
+            <Button Text="Bestätigen" Grid.Row="6" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,50,0,50" Clicked="Button_Clicked"/>
 
         </Grid>
         
@@ -57,6 +57,31 @@
             <ImageButton x:Name="Hit2" HorizontalOptions="Center" Source="twohit.svg" BorderWidth="2" BorderColor="White" Margin="0,-125,0,0" WidthRequest="100" HeightRequest="100"/>
             <ImageButton x:Name="Hit3" HorizontalOptions="Center" Source="threehit.svg" BorderWidth="2" BorderColor="White" Margin="0,100,0,0" WidthRequest="100" HeightRequest="100"/>
             <ImageButton x:Name="NoHit" HorizontalOptions="Center" Source="nohit.svg" BorderWidth="2" BorderColor="White" Margin="0,325,0,0" WidthRequest="100" HeightRequest="100"/>
+        </Grid>
+
+        <Grid x:Name="LeaderboardGrid" IsVisible="True">
+            <Label Text="Platzierungen" HorizontalOptions="Center" FontSize="32" FontAttributes="Bold" Margin="0,50,0,0"/>
+            <Rectangle x:Name="Leaderboard1Rect" Margin="10,200,92,550" Stroke="Black" Background="Gold"/>
+            <Label x:Name="Leaderboard1Name" Margin="10,200,92,550" HorizontalOptions="Center" VerticalOptions="Center" Text="" FontSize="20"/>
+            <Rectangle x:Name="Leaderboard1PointsRect" Margin="300,200,10,550" Stroke="Black" Background="Gold"/>
+            <Label x:Name="Leaderboard1Points" Margin="300,200,10,550" HorizontalOptions="Center" VerticalOptions="Center" Text="" FontSize="20"/>
+            <Rectangle x:Name="Leaderboard2Rect" Margin="10,252,92,498" Stroke="Black" Background="Silver"/>
+            <Label x:Name="Leaderboard2Name" Margin="10,252,92,498" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Text=""/>
+            <Rectangle x:Name="Leaderboard2PointsRect" Margin="300,252,10,498" Stroke="Black" Background="Silver"/>
+            <Label x:Name="Leaderboard2Points" Margin="300,252,10,498" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Text=""/>
+            <Rectangle x:Name="Leaderboard3Rect" Margin="10,304,92,446" Stroke="Black" Background="Brown"/>
+            <Label x:Name="Leaderboard3Name" Margin="10,304,92,446" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Text=""/>
+            <Rectangle x:Name="Leaderboard3PointsRect" Margin="300,304,10,446" Stroke="Black" Background="Brown"/>
+            <Label x:Name="Leaderboard3Points" Margin="300,304,10,446" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Text=""/>
+            <Rectangle x:Name="Leaderboard4Rect" Margin="10,356,92,394" Stroke="Black" Background="White"/>
+            <Label x:Name="Leaderboard4Name" Margin="10,356,92,394" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Text=""/>
+            <Rectangle x:Name="Leaderboard4PointsRect" Margin="300,356,10,394" Stroke="Black" Background="White"/>
+            <Label x:Name="Leaderboard4Points" Margin="300,356,10,394" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Text=""/>
+            <Rectangle x:Name="Leaderboard5Rect" Margin="10,408,92,340" Stroke="Black" Background="White"/>
+            <Label x:Name="Leaderboard5Name" Margin="10,408,92,340" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Text=""/>
+            <Rectangle x:Name="Leaderboard5PointsRect" Margin="300,408,10,340" Stroke="Black" Background="White"/>
+            <Label x:Name="Leaderboard5Points" Margin="300,408,10,340" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" Text=""/>
+            <Button x:Name="LiveEventFinished" Text="Event Beenden" Margin="100,600,100,100" Clicked="LiveEventFinished_Clicked"/>
         </Grid>
     </Grid>
 </ContentPage>

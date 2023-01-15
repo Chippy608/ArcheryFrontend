@@ -36,13 +36,34 @@
             <Grid x:Name="EventGrid" IsVisible="False" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="7">
                 <RoundRectangle x:Name="EventRect" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="7" Fill="WHite" Stroke="Gray" CornerRadius="20" Margin="10,0,10,0"/>
                 <Label x:Name="EventLabel" Text="1. Parkour auswählen" Margin="0,5,0,0" FontAttributes="Bold" HorizontalOptions="Center" FontSize="20"/>
-                <Button x:Name="EventParkourBestätigen" Text="Bestätigen" Margin="10,550,10,0" CornerRadius="20" Clicked="EventParkourBestätigen_Clicked"/>
+                <Button x:Name="BeispielParkour1Button" Text="Beispiel Parkour 1, Linz" Margin="20,50,20,450" CornerRadius="20"/>
+                <Button x:Name="BeispielParkour2Button" Text="Beispiel Parkour 2, Wien" Margin="20,200,20,300" CornerRadius="20"/>
+                <Button x:Name="BeispielParkour3Button" Text="Beispiel Parkour 3, Linz" Margin="20,350,20,150" CornerRadius="20"/>
+                <Button x:Name="AddedParkourButton" Text="" Margin="20,500,20,10" CornerRadius="20"/>
+                <!--<Button x:Name="EventParkourBestätigen" Text="Bestätigen" Margin="10,550,10,0" CornerRadius="20" Clicked="EventParkourBestätigen_Clicked"/>-->
             </Grid>
 
-            <Grid x:Name="EventGridStarten" IsVisible="False" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="7">
+            <Grid x:Name="EventGridStarten" IsVisible="True" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="7">
                 <RoundRectangle x:Name="EventRect2" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="7" Fill="WHite" Stroke="Gray" CornerRadius="20" Margin="10,0,10,0"/>
                 <Label x:Name="EventLabel2" Text="2. Spieler hinzufügen" Margin="0,5,0,0" FontAttributes="Bold" HorizontalOptions="Center" FontSize="20"/>
+                <Rectangle Stroke="Black" Margin="20,100,20,480"/>
+                <Label Margin="30,100,20,480" VerticalOptions="Center" HorizontalOptions="Start" Text="Ich" FontSize="20"/>
+                <Rectangle Stroke="Black" Margin="20,144,20,436"/>
+                <Label x:Name="Player2Name" Margin="30,144,20,436" VerticalOptions="Center" HorizontalOptions="Start" Text="" FontSize="20"/>
+                <Rectangle Stroke="Black" Margin="20,188,20,392"/>
+                <Label x:Name="Player3Name" Margin="30,188,20,392" VerticalOptions="Center" HorizontalOptions="Start" Text="" FontSize="20"/>
+                <Rectangle Stroke="Black" Margin="20,232,20,348"/>
+                <Label x:Name="Player4Name" Margin="30,232,20,348" VerticalOptions="Center" HorizontalOptions="Start" Text="" FontSize="20"/>
+                <Rectangle Stroke="Black" Margin="20,276,20,304"/>
+                <Label x:Name="Player5Name" Margin="30,276,20,304" VerticalOptions="Center" HorizontalOptions="Start" Text="" FontSize="20"/>
                 <Button x:Name="EventStartenButton" Text="Event Starten" Margin="10,550,10,0" CornerRadius="20" Clicked="EventStartenButton_Clicked"/>
+                <Label Margin="20,360,210,240" HorizontalOptions="Center" VerticalOptions="Center" Text="Vorname"/>
+                <Entry x:Name="FirstName" Margin="20,380,210,200" Background="LightGray"/>
+                <Label Margin="210,360,20,240" HorizontalOptions="Center" VerticalOptions="Center" Text="Nachname"/>
+                <Entry x:Name="Name" Margin="210,380,20,200" Background="LightGray"/>
+                <Label Margin="20,450,210,150" HorizontalOptions="Center" VerticalOptions="Center" Text="Nickname"/>
+                <Entry x:Name="Nickname" Margin="20,470,210,110" Background="LightGray"/>
+                <Button x:Name="AddPlayer" Margin="210,470,20,110" Text="Hinzufügen" Clicked="AddPlayer_Clicked"/>
             </Grid>
 
             <Grid x:Name="ParcourCreateGrid" IsVisible="False" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="7">
